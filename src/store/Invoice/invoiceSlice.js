@@ -3,6 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 const initialState = {
   items: [],
   newItem: {},
+  selectedItem: {},
 }
 
 export const invoiceSlice = createSlice({
@@ -16,23 +17,32 @@ export const invoiceSlice = createSlice({
       // immutable state based off those changes
       state.newItem = {
         ...state.newItem,
+        invoiceNumber: state.items.length + 1,
         customerDetails: action.payload,
       }
     },
     updateProductDetails: (state, action) => {
       state.newItem = {
         ...state.newItem,
+        invoiceNumber: state.items.length + 1,
         productDetails: action.payload,
       }
     },
     addInvoiceItem: (state) => {
       state.items = [...state.items, state.newItem]
     },
+    setSelectItem: (state, action) => {
+      state.selectedItem = action.payload
+    },
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { updateCustomerDetails, updateProductDetails, addInvoiceItem } =
-  invoiceSlice.actions
+export const {
+  updateCustomerDetails,
+  updateProductDetails,
+  addInvoiceItem,
+  setSelectItem,
+} = invoiceSlice.actions
 
 export default invoiceSlice.reducer

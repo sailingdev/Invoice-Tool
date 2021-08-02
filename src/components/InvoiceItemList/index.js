@@ -7,7 +7,7 @@ export default function InvoiceItemList(props) {
   return (
     <div>
       <div className="px-6 py-2">
-        <p className="text-xs text-grey-100">INVOICES - 54</p>
+        <p className="text-xs text-grey-100">INVOICES - {items?.length}</p>
       </div>
       <div className="flex flex-col h-screen overflow-y-scroll">
         {items?.map((item) => (

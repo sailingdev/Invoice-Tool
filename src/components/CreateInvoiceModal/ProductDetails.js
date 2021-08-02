@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import {
   addInvoiceItem,
   updateProductDetails,
@@ -10,6 +10,9 @@ import { ItemTable } from '../ItemTable'
 
 export default function Productdetails(props) {
   const dispatch = useDispatch()
+  const customerDetails = useSelector(
+    (state) => state?.invoice.newItem.customerDetails
+  )
   const [productDetails, setProductDetails] = useState({
     items: [],
     taxPercent: 0,
@@ -78,9 +81,11 @@ export default function Productdetails(props) {
         <div className="flex items-center mr-8">
           <div className="flex flex-col items-end justify-center">
             <p className="mb-1 text-xs text-grey-100">CUSTOMER DETAILS</p>
-            <p className="text-sm font-medium text-black-400">JOHN DOE</p>
+            <p className="text-sm font-medium text-black-400">
+              {customerDetails?.fullName}
+            </p>
             <p className="mb-1 text-sm text-grey-100">
-              johndeo@serviceprocider.com
+              {customerDetails?.emailId}
             </p>
           </div>
           <div
