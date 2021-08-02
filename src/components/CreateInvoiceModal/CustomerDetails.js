@@ -6,8 +6,8 @@ import SkipIcon from '../../assets/skip-icon.png'
 export default function Customerdetails(props) {
   const dispatch = useDispatch()
   const [customerDetails, setCustomerDetails] = useState({
-    fullName: 'undefined',
-    address: 'undefined',
+    fullName: 'test',
+    address: 'test',
     phoneNumber: '',
     emailId: 'test@gmail.com',
     pinCode: '123456',

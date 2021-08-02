@@ -13,6 +13,7 @@
     "react-modal": "^3.14.3",
     "react-redux": "^7.2.4",
     "react-scripts": "4.0.3",
+    "react-to-print": "^2.12.6",
     "redux": "^4.1.0",
     "redux-devtools-extension": "^2.13.9",
     "web-vitals": "^1.0.1"

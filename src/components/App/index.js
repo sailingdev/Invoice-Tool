@@ -16,11 +16,11 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="overflow-hidden">
       <CreateInvoiceModal modalIsOpen={modalIsOpen} closeModal={closeModal} />
-      <div className="flex flex-col h-screen relative">
+      <div className="relative flex flex-col h-screen">
         <button
-          className="absolute right-14 top-14 bg-pink-primary rounded-full p-4"
+          className="absolute p-4 rounded-full right-14 top-14 bg-pink-primary"
           onClick={openModal}
         >
           <img src={PlusIcon} />
