@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="overflow-hidden">
       <CreateInvoiceModal modalIsOpen={modalIsOpen} closeModal={closeModal} />
-      <div className="relative z-50 flex flex-col h-screen">
+      <div className="relative z-0 flex flex-col h-screen">
         <button
           className="absolute z-50 p-4 rounded-full right-14 top-14 bg-pink-primary"
           onClick={openModal}
