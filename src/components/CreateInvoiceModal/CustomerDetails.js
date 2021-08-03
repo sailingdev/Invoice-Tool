@@ -25,7 +25,7 @@ export default function Customerdetails(props) {
           onClick={SaveCustomerDetails}
         >
           <p className="text-sm font-medium text-blue-100">SKIP</p>
-          <img className="ml-2" src={SkipIcon} />
+          <img className="ml-2" src={SkipIcon} alt="skipIcon" />
         </button>
       </div>
       <div className="flex justify-between p-6 py-4">
@@ -98,8 +98,9 @@ export default function Customerdetails(props) {
           <div className="flex flex-col w-2/6 mb-6">
             <p className="mb-2 text-xs font-medium text-grey-100">Pincode</p>
             <input
-              type="text"
+              type="number"
               placeholder="560067"
+              maxlength="5"
               value={customerDetails.pinCode}
               onChange={(e) =>
                 setCustomerDetails({

@@ -43,7 +43,7 @@ export default function CreateInvoiceModal(props) {
           </p>
         </div>
         <button onClick={() => props.closeModal()}>
-          <img src={CloseIcon} />
+          <img src={CloseIcon} alt="closeIcon" />
         </button>
       </div>
       {step === 'step1' ? (

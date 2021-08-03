@@ -42,7 +42,7 @@ export default function Productdetails(props) {
     console.log(productDetails?.items)
     _taxAmount = _subTotal * (productDetails.taxPercent / 100)
     _discountAmount = _subTotal * (productDetails.discountPercent / 100)
-    _grandTotal = _subTotal - taxAmount - discountAmount
+    _grandTotal = _subTotal - _taxAmount - _discountAmount
     setSubTotal(_subTotal.toFixed(4))
     setTaxAmount(_taxAmount.toFixed(4))
     setDiscountAmount(_discountAmount.toFixed(4))
@@ -52,12 +52,8 @@ export default function Productdetails(props) {
   console.log(productDetails)
 
   useEffect(() => {
-    setProductDetails({
-      ...productDetails,
-      subTotal,
-      taxAmount,
-      discountAmount,
-      grandTotal,
+    setProductDetails((prev) => {
+      return { ...prev, subTotal, taxAmount, discountAmount, grandTotal }
     })
   }, [subTotal, taxAmount, discountAmount, grandTotal])
 
@@ -71,6 +67,7 @@ export default function Productdetails(props) {
   const saveProductDetails = () => {
     dispatch(updateProductDetails(productDetails))
     dispatch(addInvoiceItem())
+    props.setStep('step1')
     props.closeModal()
   }
 
@@ -92,7 +89,7 @@ export default function Productdetails(props) {
             className="flex items-center justify-center ml-4 cursor-pointer"
             onClick={() => props.setStep('step1')}
           >
-            <img src={EditIcon} className="ml-3" />
+            <img src={EditIcon} className="ml-3" alt="editIcon" />
           </div>
         </div>
       </div>
@@ -123,7 +120,7 @@ export default function Productdetails(props) {
             className="w-1/6 p-2 text-sm border rounded-md border-opacity-40 placeholder-opacity-40 border-grey-100 placeholder-grey-100 text-opacity-40 focus:outline-none focus:ring focus:border-blue-300"
           />
           <button className="p-3 border border-blue-100" onClick={addItem}>
-            <img src={EnterIcon} />
+            <img src={EnterIcon} alt="enterIcon" />
           </button>
         </div>
         <br />

@@ -23,7 +23,7 @@ function App() {
           className="absolute p-4 rounded-full right-14 top-14 bg-pink-primary"
           onClick={openModal}
         >
-          <img src={PlusIcon} />
+          <img src={PlusIcon} alt="plusIcon" />
         </button>
         <Navbar />
         <div className="flex h-full">

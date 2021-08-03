@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import { useSelector } from 'react-redux'
-import ReactToPrint, { useReactToPrint } from 'react-to-print'
+import { useReactToPrint } from 'react-to-print'
 import PrintIcon from '../../assets/printer-blue.png'
 import { ItemTable } from '../ItemTable'
 
@@ -41,7 +41,7 @@ export default function InvoiceDetails(props) {
               onClick={handlePrint}
             >
               <p className="text-sm font-medium text-blue-100">PRINT</p>
-              <img src={PrintIcon} className="ml-3" />
+              <img src={PrintIcon} className="ml-3" alt="printIcon" />
             </button>
           </div>
         </div>

@@ -6,7 +6,7 @@ export default function SearchInput(props) {
     <div className="flex p-2 m-3 border rounded-full border-grey-200 bg-grey-200">
       <button>
         <span className="flex items-center justify-end w-auto p-2 text-grey">
-          <img src={SearchIcon} />
+          <img src={SearchIcon} alt="searchIcon" />
         </span>
       </button>
       <input
