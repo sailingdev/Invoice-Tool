@@ -3,9 +3,14 @@ import InvoiceDetails from '../InvoiceDetails'
 
 export default function Container(props) {
   return (
-    <div className="w-3/4 bg-white-100 p-6 flex flex-col">
-      <p className="text-grey-100 text-sm font-medium mb-3">INVOICE DETAILS</p>
+    <div className="relative z-auto flex flex-col w-3/4 p-6 bg-white-100">
+      <p className="mb-3 text-sm font-medium text-grey-100">INVOICE DETAILS</p>
       <InvoiceDetails />
+      <div className="absolute bottom-32 right-5">
+        <a href="https://github.com/RisingStar-Web/Invoice-Tool">
+          Developed by <strong>Roy Chong</strong>
+        </a>
+      </div>
     </div>
   )
 }
