@@ -16,8 +16,8 @@ export function ItemTable(props) {
             PRICE
           </th>
         </tr>
-        {props?.items?.map((item) => (
-          <InvoiceItem item={item} />
+        {props?.items?.map((item, index) => (
+          <InvoiceItem item={item} key={index} />
         ))}
       </table>
     </>

@@ -6,11 +6,6 @@ export default function Container(props) {
     <div className="relative z-0 flex flex-col w-3/4 p-6 bg-white-100">
       <p className="mb-3 text-sm font-medium text-grey-100">INVOICE DETAILS</p>
       <InvoiceDetails />
-      <div className="absolute bottom-32 right-5">
-        <a href="https://github.com/RisingStar-Web/Invoice-Tool">
-          Developed by <strong>Roy Chong</strong>
-        </a>
-      </div>
     </div>
   )
 }

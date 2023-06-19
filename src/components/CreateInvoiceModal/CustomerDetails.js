@@ -100,7 +100,7 @@ export default function Customerdetails(props) {
             <input
               type="number"
               placeholder="560067"
-              maxlength="5"
+              maxLength="5"
               value={customerDetails.pinCode}
               onChange={(e) =>
                 setCustomerDetails({
